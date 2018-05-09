@@ -19,3 +19,5 @@ class Solution {
             return false;
     }
 }
+// O(n)
+// Space O(1), the array is O(n)
