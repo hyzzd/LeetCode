@@ -13,4 +13,4 @@ public class Solution {
 }
 // swap
 // O(n)
-// O(1)
+// O(n)
