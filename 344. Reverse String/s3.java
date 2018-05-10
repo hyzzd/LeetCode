@@ -13,4 +13,4 @@ public class Solution {
 }
 // swap
 // O(n)
-// O(n)
+// O(n) use space to store all the batch input
