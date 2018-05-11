@@ -1,2 +1,2 @@
 // recursive?
-// n-2 ~ n-6 returns the same problem
+// n-1 ~ n-3 returns the same problem
