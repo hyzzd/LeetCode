@@ -37,12 +37,12 @@ class Solution {
     
     public void average(TreeNode t, int i, List<Double> sum, List<Integer> count) {
         if(t == null) return;
-        if(i < sum.size()){
-            sum.set(i, sum.get(i) + t.val);
-            count.set(i, count.get(i) + 1);
+        if(i < sum.size()){                   // the level has already in the sum array
+            sum.set(i, sum.get(i) + t.val);   // assign new value to sum
+            count.set(i, count.get(i) + 1);   // assign new value to count
         }else{
-            sum.add(t.val*1.0);
-            count.add(1);
+            sum.add(t.val*1.0);               // new level, add value
+            count.add(1);                     // new level, add one
         }
         average(t.left, i+1, sum, count);
         average(t.right, i+1, sum, count);
