@@ -3,5 +3,5 @@ public boolean rotateString(String A, String B) {
 }
 //“abcdeabcde” (A + A)
 //  “cdeab” (B)
+//O(n^2)
 //O(n)
-//O(1)
