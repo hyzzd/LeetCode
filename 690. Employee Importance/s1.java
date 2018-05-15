@@ -29,3 +29,5 @@ class Solution {
         return ans;
     }
 }
+// O(n)
+// O(n)
