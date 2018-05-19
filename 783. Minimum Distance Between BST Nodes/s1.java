@@ -26,3 +26,5 @@ class Solution {
         return min;
     }
 }
+// O(n)
+// O(h)
