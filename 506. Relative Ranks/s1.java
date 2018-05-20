@@ -1,27 +1,22 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 class Solution {
-    int ans = 0;
-    
-    public int findTilt(TreeNode root) {
-        helper(root);
+    public String[] findRelativeRanks(int[] nums) {
+        String[] ans = new String[nums.length];
+        int max = 0;
+        for(int i: nums) max = Math.max(max, i);
+        int[] hash = new int[max+1];
+        for(int i = 0; i < nums.length; ++i) hash[nums[i]] = i+1;
+        int k = 0;
+        for(int i = hash.length-1; i >= 0; --i){
+            if(hash[i] != 0){
+                if(k == 0) ans[hash[i] - 1] = "Gold Medal";
+                else if(k == 1) ans[hash[i] - 1] = "Silver Medal";
+                else if(k == 2) ans[hash[i] - 1] = "Bronze Medal";
+                else ans[hash[i] - 1] = String.valueOf(k + 1);    
+                k++;
+            }
+        }
         return ans;
-    }
-    
-    private int helper(TreeNode root){ // returns the sum of subtree
-        if(root == null) return 0;
-        int left = helper(root.left);
-        int right = helper(root.right);
-        ans += Math.abs(left - right);
-        return left+right+root.val;
     }
 }
 // O(n)
-// O(h)
+// O(1)
