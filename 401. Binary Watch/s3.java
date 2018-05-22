@@ -9,3 +9,5 @@ public List<String> readBinaryWatch(int num) {
     }
     return result;
 }
+// O(mn)
+// O(num)
