@@ -8,3 +8,4 @@ class Solution {
         return num == 0;
     }
 }
+// O(sqrt(n))
