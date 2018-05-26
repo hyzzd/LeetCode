@@ -1,6 +1,6 @@
 class Solution {
     public int[] findErrorNums(int[] nums) {
-        int dup = -1, miss = -1;
+        int dup = -1, miss = 1;
         for(int n: nums){
             if(nums[Math.abs(n) - 1] < 0) dup = Math.abs(n);
             else nums[Math.abs(n) - 1] *= -1;
