@@ -30,3 +30,5 @@ public ListNode reverse(ListNode head) {
     }
     return prev;
 }
+// O(n)
+// O(1)
