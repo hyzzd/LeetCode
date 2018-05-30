@@ -10,9 +10,9 @@ class Solution {
             else if(!Character.isLetterOrDigit(cTail)) tail--;
             else{
                 if(Character.toLowerCase(cHead) != Character.toLowerCase(cTail)) return false;
-            }
-            head++;
-            tail--
+                head++;
+                tail--;
+            }            
         }
         return true;
     }
