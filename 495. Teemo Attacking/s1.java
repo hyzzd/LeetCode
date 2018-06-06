@@ -8,5 +8,6 @@ class Solution {
         return ans+duration;
     }
 }
+// Check the edge condition
 // O(n)
 // O(1)
