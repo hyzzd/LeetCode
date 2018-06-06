@@ -15,4 +15,4 @@ public class Solution {
     }
 }
 // O(n)
-// O(n)
+// O(1)
