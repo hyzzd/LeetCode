@@ -30,9 +30,9 @@ class Main{
         return result;
     }
     public static void main(String[] args){
-        Main s = new Main();
+        Main m = new Main();
         int[] nums = new int[]{-4,-2,2,4};
-        int[] result = s.sortTransformedArray(nums, 1, 3, 5);
+        int[] result = m.sortTransformedArray(nums, 1, 3, 5);
         for(int num : result){
             System.out.print(num + " ");
         }        

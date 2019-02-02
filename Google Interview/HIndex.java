@@ -15,9 +15,9 @@ class Main {
         return 0;
     }
     public static void main(String[] args){
-        Main s = new Main();
+        Main m = new Main();
         int[] nums = new int[]{1,2,3,4};
         
-        System.out.print(s.hIndex(nums));
+        System.out.print(m.hIndex(nums));
     }
 }

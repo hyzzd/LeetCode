@@ -32,9 +32,9 @@ class Main {
         }
     }
     public static void main(String[] args){
-        Main s = new Main();
+        Main m = new Main();
         int[] nums = new int[]{1,2,3,4};
-        s.nextPermutation(nums);
+        m.nextPermutation(nums);
         for(int num : nums){
             System.out.print(num + " ");
         }        

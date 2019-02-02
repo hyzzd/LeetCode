@@ -17,8 +17,8 @@ class Main {
         return result;
     }
     public static void main(String[] args){
-        Main s = new Main();
-        int[] digits = s.plusOne(new int[]{1,2,3,4});
+        Main m = new Main();
+        int[] digits = m.plusOne(new int[]{1,2,3,4});
         for(int digit : digits){
             System.out.print(digit + " ");
         }        
