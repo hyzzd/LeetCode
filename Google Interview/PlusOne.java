@@ -16,11 +16,12 @@ class Main {
         }
         return result;
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Main m = new Main();
-        int[] digits = m.plusOne(new int[]{1,2,3,4});
-        for(int digit : digits){
+        int[] digits = m.plusOne(new int[] { 1, 2, 3, 4 });
+        for (int digit : digits) {
             System.out.print(digit + " ");
-        }        
+        }
     }
 }
