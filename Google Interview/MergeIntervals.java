@@ -27,13 +27,14 @@ class Main {
         }
         return result;
     }
+
     public static void main(String args[]) {
         Main m = new Main();
         List<Interval> intervals = new ArrayList<>();
-        intervals.add(new Interval(1,3));
-        intervals.add(new Interval(2,6));
-        intervals.add(new Interval(8,10));
-        intervals.add(new Interval(15,18));
+        intervals.add(new Interval(1, 3));
+        intervals.add(new Interval(2, 6));
+        intervals.add(new Interval(8, 10));
+        intervals.add(new Interval(15, 18));
         List<Interval> results = m.merge(intervals);
         for (Interval result : results) {
             System.out.print("[" + result.start + ", " + result.end + "] ");
