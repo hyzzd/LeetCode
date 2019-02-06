@@ -2,41 +2,42 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-class Main{
-    
+class Main {
+
 }
+
 class LFUCache {
     private Map<Integer, Node> values = new HashMap<>();
     private Map<Integer, Integer> counts = new HashMap<>();
     private TreeMap<Integer, DoubleLinkedList> frequencies = new TreeMap<>();
     private final int MAX_CAPACITY;
-    
-    public LFUCache(int capacity){
-        MAX_CAPACITY = capacity; 
+
+    public LFUCache(int capacity) {
+        MAX_CAPACITY = capacity;
     }
-    
-    public int get(int key){
-        if(!values.containsKey(key)){
+
+    public int get(int key) {
+        if (!values.containsKey(key)) {
             return -1;
         }
-        
+
         Node node = values.get(key);
-        
+
         int frequency = counts.get(key);
         frequencies.get(frequency).remove(node);
         removeIfListEmpty(frequency);
         frequencies.computeIfAbsent(frequency + 1, k -> new DoubleLinkedList()).add(node);
-        
+
         counts.put(key, frequency + 1);
         return values.get(key).value;
     }
-    
-    public void set(int key, int value){
-        if(!values.containsKey(key)){
+
+    public void set(int key, int value) {
+        if (!values.containsKey(key)) {
             Node node = new Node(key, value);
-            
+
             if (values.size() == MAX_CAPACITY) {
-                int lowestCount = frequencies.firstKey();   // smallest frequency
+                int lowestCount = frequencies.firstKey(); // smallest frequency
                 Node nodeTodelete = frequencies.get(lowestCount).head(); // first item (LRU)
                 frequencies.get(lowestCount).remove(nodeTodelete);
 
@@ -45,19 +46,19 @@ class LFUCache {
                 values.remove(keyToDelete);
                 counts.remove(keyToDelete);
             }
-            
+
             values.put(key, node);
             counts.put(key, 1);
             frequencies.computeIfAbsent(1, k -> new DoubleLinkedList()).add(node); // starting frequency = 1
         }
     }
-    
+
     private void removeIfListEmpty(int frequency) {
         if (frequencies.get(frequency).size() == 0) {
-            frequencies.remove(frequency);  // remove from map if list is empty
+            frequencies.remove(frequency); // remove from map if list is empty
         }
     }
-    
+
     private class Node {
         private int key;
         private int value;
@@ -96,11 +97,15 @@ class LFUCache {
 
         public void remove(Node node) {
 
-            if (node.next == null) tail = node.prev;
-            else node.next.prev = node.prev;
+            if (node.next == null)
+                tail = node.prev;
+            else
+                node.next.prev = node.prev;
 
-            if (head.key == node.key) head = node.next;
-            else node.prev.next = node.next;
+            if (head.key == node.key)
+                head = node.next;
+            else
+                node.prev.next = node.next;
 
             n--;
         }
@@ -113,7 +118,7 @@ class LFUCache {
             return n;
         }
     }
-    
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

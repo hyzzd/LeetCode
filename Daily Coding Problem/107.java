@@ -2,60 +2,60 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class Main {
-    static class Node { 
-        int data; 
-        Node left; 
-        Node right; 
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
-        Node(int data) { 
-          this.data = data; 
-          left = null; 
-          right = null; 
-        } 
-    } 
-    
-    static void levelOrder(Node root) { 
-        if (root == null) 
-            return; 
+        Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
 
-        Queue<Node> q = new LinkedList<>(); 
-        // Pushing root node into the queue. 
-        q.add(root); 
-        // Pushing delimiter into the queue. 
-        q.add(null); 
-        // Executing loop till queue becomes 
-        // empty 
-        while (!q.isEmpty()) { 
-            Node curr = q.poll(); 
-            // condition to check the 
-            // occurence of next level 
-            if (curr == null) { 
-                if (!q.isEmpty()) { 
-                  q.add(null); 
-                  System.out.println(); 
-                } 
-            } else { 
-                // Pushing left child current node 
-                if (curr.left != null) 
-                  q.add(curr.left); 
+    static void levelOrder(Node root) {
+        if (root == null)
+            return;
 
-                // Pushing right child current node 
-                if (curr.right != null) 
-                  q.add(curr.right); 
+        Queue<Node> q = new LinkedList<>();
+        // Pushing root node into the queue.
+        q.add(root);
+        // Pushing delimiter into the queue.
+        q.add(null);
+        // Executing loop till queue becomes
+        // empty
+        while (!q.isEmpty()) {
+            Node curr = q.poll();
+            // condition to check the
+            // occurence of next level
+            if (curr == null) {
+                if (!q.isEmpty()) {
+                    q.add(null);
+                    System.out.println();
+                }
+            } else {
+                // Pushing left child current node
+                if (curr.left != null)
+                    q.add(curr.left);
 
-                System.out.print(curr.data + " "); 
+                // Pushing right child current node
+                if (curr.right != null)
+                    q.add(curr.right);
+
+                System.out.print(curr.data + " ");
             }
-        } 
-    } 
-    
-    public static void main(String[] args) {
-        Node root = new Node(1); 
-        root.left = new Node(2); 
-        root.right = new Node(3); 
-        root.left.left = new Node(4); 
-        root.left.right = new Node(5); 
-        root.right.right = new Node(6); 
+        }
+    }
 
-        levelOrder(root); 
+    public static void main(String[] args) {
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+        root.left.left = new Node(4);
+        root.left.right = new Node(5);
+        root.right.right = new Node(6);
+
+        levelOrder(root);
     }
 }

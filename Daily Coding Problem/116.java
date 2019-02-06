@@ -1,12 +1,12 @@
 class Main {
-    public Node generate(){
-        if(coinflip()){
+    public Node generate() {
+        if (coinflip()) {
             return new Node();
         }
-        
+
         return new Node(null, generate());
     }
-    
+
     private boolean coinflip() {
         return false;
     }
@@ -16,13 +16,15 @@ class Main {
     }
 }
 
-class Node{
+class Node {
     int val;
     Node left, right;
-    Node(){
+
+    Node() {
         this.left = this.right = null;
     }
-    Node(Node left, Node right){
+
+    Node(Node left, Node right) {
         this.left = left;
         this.right = right;
     }

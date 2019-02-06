@@ -7,24 +7,26 @@ class Main {
         constructPaths(root, "", paths);
         return paths;
     }
-    private void constructPaths(TreeNode root, String path, List<String> paths){
-        if(root != null){
+
+    private void constructPaths(TreeNode root, String path, List<String> paths) {
+        if (root != null) {
             path += Integer.toString(root.val);
-            if((root.left == null) && (root.right == null)){
+            if ((root.left == null) && (root.right == null)) {
                 paths.add(path);
-            }else{
+            } else {
                 path += "->";
                 constructPaths(root.left, path, paths);
                 constructPaths(root.right, path, paths);
             }
         }
     }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 }
 
-class TreeNode{
+class TreeNode {
     int val;
     TreeNode left, right;
 }

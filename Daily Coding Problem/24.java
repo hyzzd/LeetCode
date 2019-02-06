@@ -1,11 +1,11 @@
 class Main {
-    class Node{
+    class Node {
         int val;
         Node left, right, parent;
         boolean isLocked = false;
         int count = 0;
-        
-        Node(int val){
+
+        Node(int val) {
             this.val = val;
             this.left = null;
             this.right = null;
@@ -13,59 +13,60 @@ class Main {
             this.isLocked = false;
             this.count = 0;
         }
-        
-        public boolean canLock(){
-            if(this.count > 0)
+
+        public boolean canLock() {
+            if (this.count > 0)
                 return false;
-            
+
             Node curr = this.parent;
-            while(curr != null){
-                if(curr.isLocked){
+            while (curr != null) {
+                if (curr.isLocked) {
                     return false;
                 }
-                
+
                 curr = curr.parent;
             }
-            
+
             return true;
         }
-        
-        public boolean isLocked(){
+
+        public boolean isLocked() {
             return this.isLocked;
         }
-        
-        public boolean lock(){
-            if(this.canLock()){
+
+        public boolean lock() {
+            if (this.canLock()) {
                 this.isLocked = true;
-                
+
                 Node curr = this.parent;
-                while(curr != null){
+                while (curr != null) {
                     curr.count += 1;
                     curr = curr.parent;
                 }
-                
+
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
-        
-        public boolean unlock(){
-            if(this.canLock()){
+
+        public boolean unlock() {
+            if (this.canLock()) {
                 this.isLocked = false;
-                
+
                 Node curr = this.parent;
-                while(curr != null){
+                while (curr != null) {
                     curr.count -= 1;
                     curr = curr.parent;
                 }
-                
+
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
     }
+
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
