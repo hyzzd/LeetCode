@@ -1,5 +1,5 @@
 public class Solution {
-    public boolean isPalindrome(int x) {  // Cannot solve it without using extra space
+    public boolean isPalindrome(int x) { // Cannot solve it without using extra space
         int sum = 0, target = x;
         while (x > 0) {
             int temp = x % 10;
