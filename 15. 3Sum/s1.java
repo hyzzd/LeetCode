@@ -6,7 +6,7 @@ class Solution {
             return list; // edge cases
         Arrays.sort(nums); // promise not duplicate triples
         int target = 0;
-        for (int i = 0; i < nums.length; ++i) {
+        for (int i = 0; i < nums.length - 2; ++i) {
             if (i > 0 && nums[i] == nums[i - 1])
                 continue; //
             int j = i + 1;
