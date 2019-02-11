@@ -1,13 +1,13 @@
 public class Solution {
     public int removeDuplicates(int[] nums) {
-        if (nums.length < 2) return nums.length;
+        if (nums.length < 2)
+            return nums.length;
         int i = 1;
         int j = 0;
-        while (i < nums.length){
-            if (nums[i] == nums[j]){
+        while (i < nums.length) {
+            if (nums[i] == nums[j]) {
                 i++;
-            }
-            else{
+            } else {
                 j++;
                 nums[j] = nums[i];
                 i++;
@@ -18,11 +18,6 @@ public class Solution {
 }
 
 /*
-int count = 0;
-	for (int i = 0; i < A.length - 1; i++) {
-		if (A[i] == A[i + 1]) {
-			count++;
-		}
-	}
-	return (A.length - count);
-*/
+ * int count = 0; for (int i = 0; i < A.length - 1; i++) { if (A[i] == A[i + 1])
+ * { count++; } } return (A.length - count);
+ */

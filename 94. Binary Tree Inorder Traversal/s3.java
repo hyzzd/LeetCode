@@ -1,6 +1,6 @@
 class Solution {
-    public List < Integer > inorderTraversal(TreeNode root) {
-        List < Integer > res = new ArrayList < > ();
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
         TreeNode curr = root;
         TreeNode pre;
         while (curr != null) {

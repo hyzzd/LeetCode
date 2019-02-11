@@ -2,12 +2,13 @@
 // 
 public class Solution {
     public int climbStairs(int n) {
-        int[][] q = {{1, 1}, {1, 0}};
+        int[][] q = { { 1, 1 }, { 1, 0 } };
         int[][] res = pow(q, n);
         return res[0][0];
     }
+
     public int[][] pow(int[][] a, int n) {
-        int[][] ret = {{1, 0}, {0, 1}};
+        int[][] ret = { { 1, 0 }, { 0, 1 } };
         while (n > 0) {
             if ((n & 1) == 1) {
                 ret = multiply(ret, a);
@@ -17,6 +18,7 @@ public class Solution {
         }
         return ret;
     }
+
     public int[][] multiply(int[][] a, int[][] b) {
         int[][] c = new int[2][2];
         for (int i = 0; i < 2; i++) {

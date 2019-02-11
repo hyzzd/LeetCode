@@ -3,14 +3,15 @@ class Solution {
         int[] memo = new int[n + 1];
         return dfs(0, n, memo);
     }
-    public int dfs(int i, int n, int[] memo){
-        if(i > n){
+
+    public int dfs(int i, int n, int[] memo) {
+        if (i > n) {
             return 0;
         }
-        if(i == n){
+        if (i == n) {
             return 1;
         }
-        if(memo[i] > 0)
+        if (memo[i] > 0)
             return memo[i];
         memo[i] = dfs(i + 1, n, memo) + dfs(i + 2, n, memo);
         return memo[i];
