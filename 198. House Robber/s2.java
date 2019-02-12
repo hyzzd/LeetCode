@@ -2,7 +2,7 @@ class Solution {
     public int rob(int[] nums) {
         int y = 0;
         int n = 0;
-        for(int i:nums){
+        for (int i : nums) {
             int t = n;
             n = Math.max(y, n);
             y = t + i;
