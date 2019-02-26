@@ -3,12 +3,13 @@ class Solution {
         // first loop over see how many kinds
         // sister get all kinds, if not in order
         int[] a = new int[candies.length];
-        for(int i = 0; i < candies.length; ++i){
+        for (int i = 0; i < candies.length; ++i) {
             a[candies[i]]++;
         }
         int count = 0;
-        for(int i = 0; i < a.length; ++i){
-            if(a[i] != 0) count++;
+        for (int i = 0; i < a.length; ++i) {
+            if (a[i] != 0)
+                count++;
         }
         return Math.min(candies.length / 2, count);
     }

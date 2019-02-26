@@ -1,8 +1,8 @@
 public class Solution {
     public int[] findErrorNums(int[] nums) {
-        Map < Integer, Integer > map = new HashMap();
+        Map<Integer, Integer> map = new HashMap();
         int dup = -1, missing = 1;
-        for (int n: nums) {
+        for (int n : nums) {
             map.put(n, map.getOrDefault(n, 0) + 1);
         }
         for (int i = 1; i <= nums.length; i++) {
@@ -12,7 +12,7 @@ public class Solution {
             } else
                 missing = i;
         }
-        return new int[]{dup, missing};
+        return new int[] { dup, missing };
     }
 }
 // O(n)

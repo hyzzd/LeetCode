@@ -12,6 +12,7 @@ class Solution {
             }
         }
     }
+
     public int findSecondMinimumValue(TreeNode root) {
         min1 = root.val;
         dfs(root);

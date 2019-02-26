@@ -8,7 +8,7 @@ public class Solution {
             else if (nums[i] > nums[i - 1] + 1)
                 missing = nums[i - 1] + 1;
         }
-        return new int[] {dup, nums[nums.length - 1] != nums.length ? nums.length : missing};
+        return new int[] { dup, nums[nums.length - 1] != nums.length ? nums.length : missing };
     }
 }
 // O(nlgn)

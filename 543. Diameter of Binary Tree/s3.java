@@ -19,7 +19,7 @@ class Solution {
             if (!explored && node.right != null) {
                 stack.push(node.right);
             }
-            //System.out.println("explored - " + explored + ", node val - " + node.val);
+            // System.out.println("explored - " + explored + ", node val - " + node.val);
             if (explored) {
                 int leftLength = maxLengthMap.getOrDefault(node.left, 0);
                 if (node.left != null) {
@@ -30,7 +30,8 @@ class Solution {
                     rightLength += 1;
                 }
 
-                //System.out.println("-- leftLength - " + leftLength + ", rightLength - " + rightLength);
+                // System.out.println("-- leftLength - " + leftLength + ", rightLength - " +
+                // rightLength);
                 maxLengthMap.put(node, Math.max(leftLength, rightLength));
                 int diameter = leftLength + rightLength;
                 if (maxDiameter < diameter) {

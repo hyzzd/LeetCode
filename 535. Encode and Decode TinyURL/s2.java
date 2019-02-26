@@ -1,6 +1,7 @@
 public class Codec {
 
     Map<Integer, String> map = new HashMap<>();
+
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
         map.put(longUrl.hashCode(), longUrl);

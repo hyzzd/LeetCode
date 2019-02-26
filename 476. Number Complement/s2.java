@@ -1,8 +1,8 @@
 class Solution {
     public int findComplement(int num) {
-        //return ~num & ((Integer.highestOneBit(num) << 1) - 1);
+        // return ~num & ((Integer.highestOneBit(num) << 1) - 1);
         int i = 0, j = 0;
-        while(i < num){
+        while (i < num) {
             i += Math.pow(2, j);
             j++;
         }

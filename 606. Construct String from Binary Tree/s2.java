@@ -2,9 +2,9 @@ public class Solution {
     public String tree2str(TreeNode t) {
         if (t == null)
             return "";
-        Stack < TreeNode > stack = new Stack < > ();
+        Stack<TreeNode> stack = new Stack<>();
         stack.push(t);
-        Set < TreeNode > visited = new HashSet < > ();
+        Set<TreeNode> visited = new HashSet<>();
         StringBuilder s = new StringBuilder();
         while (!stack.isEmpty()) {
             t = stack.peek();

@@ -7,6 +7,6 @@ class Solution {
             digits++;
             first *= 10;
         }
-        return (first + n/digits + "").charAt(n%digits) - '0';
+        return (first + n / digits + "").charAt(n % digits) - '0';
     }
 }

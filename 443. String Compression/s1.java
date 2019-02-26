@@ -5,7 +5,7 @@ class Solution {
             if (read + 1 == chars.length || chars[read + 1] != chars[read]) {
                 chars[write++] = chars[anchor];
                 if (read > anchor) {
-                    for (char c: ("" + (read - anchor + 1)).toCharArray()) {
+                    for (char c : ("" + (read - anchor + 1)).toCharArray()) {
                         chars[write++] = c;
                     }
                 }

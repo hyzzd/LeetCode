@@ -6,7 +6,7 @@ class Solution {
         char[] num2Array = num2.toCharArray();
         int carry = 0;
         StringBuilder sb = new StringBuilder();
-        while(carry == 1 || i >= 0 || j >= 0){
+        while (carry == 1 || i >= 0 || j >= 0) {
             int a = i >= 0 ? (num1Array[i--] - '0') : 0;
             int b = j >= 0 ? (num2Array[j--] - '0') : 0;
             int sum = a + b + carry;

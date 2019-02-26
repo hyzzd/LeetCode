@@ -1,7 +1,7 @@
 public class Solution {
     public boolean findTarget(TreeNode root, int k) {
-        Set < Integer > set = new HashSet();
-        Queue < TreeNode > queue = new LinkedList();
+        Set<Integer> set = new HashSet();
+        Queue<TreeNode> queue = new LinkedList();
         queue.add(root);
         while (!queue.isEmpty()) {
             if (queue.peek() != null) {

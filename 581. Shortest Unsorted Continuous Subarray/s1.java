@@ -3,8 +3,8 @@ class Solution {
         int[] snums = nums.clone();
         Arrays.sort(snums);
         int start = snums.length, end = 0;
-        for(int i = 0; i < snums.length; ++i){
-            if(snums[i] != nums[i]){
+        for (int i = 0; i < snums.length; ++i) {
+            if (snums[i] != nums[i]) {
                 start = Math.min(start, i);
                 end = Math.max(end, i);
             }

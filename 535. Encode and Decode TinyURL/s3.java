@@ -3,9 +3,10 @@ public class Codec {
     Map<Integer, String> map = new HashMap<>();
     Random r = new Random();
     int key = r.nextInt(10000);
+
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
-        while(map.containsKey(key))
+        while (map.containsKey(key))
             key = r.nextInt(10000);
         map.put(key, longUrl);
         return "http://tinyurl.com/" + key;

@@ -1,6 +1,7 @@
 public class Codec {
 
     List<String> urls = new ArrayList<>();
+
     // Encodes a URL to a shortened URL.
     public String encode(String longUrl) {
         urls.add(longUrl);

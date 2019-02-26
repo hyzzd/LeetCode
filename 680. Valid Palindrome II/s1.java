@@ -7,12 +7,14 @@ class Solution {
         }
         return true;
     }
+
     public boolean validPalindrome(String s) {
         StringBuilder sb = new StringBuilder(s);
         for (int i = 0; i < s.length(); i++) {
             char c = sb.charAt(i);
             sb.deleteCharAt(i);
-            if (isPalindrome(sb)) return true;
+            if (isPalindrome(sb))
+                return true;
             sb.insert(i, c);
         }
         return isPalindrome(s);
