@@ -12,20 +12,22 @@ class Employee {
 */
 class Solution {
     Map<Integer, Employee> map = new HashMap<>();
-    
+
     public int getImportance(List<Employee> employees, int id) {
-        if(employees == null) return 0;
-        //Map<Integer, Employee> map = new HashMap<>();
-        for(Employee e: employees) map.put(e.id, e);
+        if (employees == null)
+            return 0;
+        // Map<Integer, Employee> map = new HashMap<>();
+        for (Employee e : employees)
+            map.put(e.id, e);
         return dfs(id);
     }
-    
-    public int dfs(int eid){
+
+    public int dfs(int eid) {
         Employee employee = map.get(eid);
         int ans = employee.importance;
-        for(Integer subid: employee.subordinates){
+        for (Integer subid : employee.subordinates) {
             ans += dfs(subid);
-        }        
+        }
         return ans;
     }
 }

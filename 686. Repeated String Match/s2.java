@@ -9,6 +9,7 @@ class Solution {
         }
         return true;
     }
+
     public int repeatedStringMatch(String A, String B) {
         int q = (B.length() - 1) / A.length() + 1;
         int p = 113, MOD = 1_000_000_007;
@@ -21,14 +22,16 @@ class Solution {
             power = (power * p) % MOD;
         }
 
-        long aHash = 0; power = 1;
+        long aHash = 0;
+        power = 1;
         for (int i = 0; i < B.length(); i++) {
             aHash += power * A.codePointAt(i % A.length());
             aHash %= MOD;
             power = (power * p) % MOD;
         }
 
-        if (aHash == bHash && check(0, A, B)) return q;
+        if (aHash == bHash && check(0, A, B))
+            return q;
         power = (power * pInv) % MOD;
 
         for (int i = B.length(); i < (q + 1) * A.length(); i++) {

@@ -3,12 +3,12 @@ class Solution {
         if (S == null) {
             return new LinkedList<>();
         }
-        
+
         List<String> res = new LinkedList<>();
         helper(S, res, 0);
         return res;
     }
-    
+
     public void helper(String s, List<String> res, int pos) {
         if (pos == s.length()) {
             res.add(s);
@@ -18,11 +18,11 @@ class Solution {
             helper(s, res, pos + 1);
             return;
         }
-        
+
         char[] chs = s.toCharArray();
         chs[pos] = Character.toLowerCase(chs[pos]);
         helper(String.valueOf(chs), res, pos + 1);
-        
+
         chs[pos] = Character.toUpperCase(chs[pos]);
         helper(String.valueOf(chs), res, pos + 1);
     }
