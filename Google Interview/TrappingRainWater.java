@@ -1,4 +1,4 @@
-class TrappingRainWater {
+class Main {
     public int trap(int[] A) {
         if (A == null || A.length == 0) {
             return -1;
@@ -22,7 +22,7 @@ class TrappingRainWater {
     }
 
     public static void main(String args[]) {
-        TrappingRainWater m = new TrappingRainWater();
+        Main m = new Main();
         int[] nums = new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
         System.out.print(m.trap(nums));
     }

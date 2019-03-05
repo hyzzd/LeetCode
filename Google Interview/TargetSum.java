@@ -1,4 +1,4 @@
-class TargetSum {
+class Main {
     int res = 0;
 
     public int findTargetSumWays(int[] nums, int S) {
@@ -23,7 +23,7 @@ class TargetSum {
     }
 
     public static void main(String args[]) {
-        TargetSum m = new TargetSum();
+        Main m = new Main();
         int[] nums = new int[] { 1, 1, 1, 1, 1 };
         System.out.print(m.findTargetSumWays(nums, 3));
     }

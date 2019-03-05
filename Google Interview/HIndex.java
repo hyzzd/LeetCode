@@ -1,4 +1,4 @@
-class HIndex {
+class Main {
     public int hIndex(int[] citations) {
         int len = citations.length;
         if (citations == null || len == 0)
@@ -21,7 +21,7 @@ class HIndex {
     }
 
     public static void main(String[] args) {
-        HIndex m = new HIndex();
+        Main m = new Main();
         int[] nums = new int[] { 1, 2, 3, 4 };
 
         System.out.print(m.hIndex(nums));

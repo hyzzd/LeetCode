@@ -1,4 +1,4 @@
-class MedianOfTwoSortedArrays {
+class Main {
     public double findMedianSortedArrays(int[] A, int[] B) {
         int len = A.length + B.length;
         if (len % 2 == 1) {
@@ -28,7 +28,7 @@ class MedianOfTwoSortedArrays {
     }
 
     public static void main(String args[]) {
-        MedianOfTwoSortedArrays m = new MedianOfTwoSortedArrays();
+        Main m = new Main();
         int[] a = new int[] { 1, 2 };
         int[] b = new int[] { 3, 4 };
         System.out.print(m.findMedianSortedArrays(a, b));

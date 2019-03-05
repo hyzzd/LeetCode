@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class SummaryRanges {
+class Main {
     public List<String> summaryRanges(int[] nums) {
         List<String> list = new ArrayList<>();
         if (nums.length == 1) {
@@ -24,7 +24,7 @@ class SummaryRanges {
     }
 
     public static void main(String args[]) {
-        SummaryRanges m = new SummaryRanges();
+        Main m = new Main();
         int[] nums = new int[] { 0, 1, 2, 4, 5, 7 };
         List<String> list = m.summaryRanges(nums);
         for (String li : list) {

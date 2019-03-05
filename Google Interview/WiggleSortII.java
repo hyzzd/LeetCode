@@ -1,4 +1,4 @@
-class WiggleSortII {
+class Main {
     public void wiggleSort(int[] nums) {
         int median = findKthLargest(nums, (nums.length + 1) / 2);
         int n = nums.length;

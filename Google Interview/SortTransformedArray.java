@@ -1,4 +1,4 @@
-class SortTransformedArray {
+class Main {
     public int[] sortTransformedArray(int[] nums, int a, int b, int c) {
         int[] result = new int[nums.length];
         if (nums == null || nums.length == 0) {
@@ -31,7 +31,7 @@ class SortTransformedArray {
     }
 
     public static void main(String[] args) {
-        SortTransformedArray m = new SortTransformedArray();
+        Main m = new Main();
         int[] nums = new int[] { -4, -2, 2, 4 };
         int[] result = m.sortTransformedArray(nums, 1, 3, 5);
         for (int num : result) {

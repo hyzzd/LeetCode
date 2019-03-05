@@ -1,4 +1,4 @@
-class NextPermutation {
+class Main {
     public void nextPermutation(int[] nums) {
         // find two adjacent elements, n[i-1] < n[i]
         int i = nums.length - 1;
@@ -34,7 +34,7 @@ class NextPermutation {
     }
 
     public static void main(String[] args) {
-        NextPermutation m = new NextPermutation();
+        Main m = new Main();
         int[] nums = new int[] { 1, 2, 3, 4 };
         m.nextPermutation(nums);
         for (int num : nums) {

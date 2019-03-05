@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class ThreeSumSmaller {
+class Main {
     public int threeSumSmaller(int[] nums, int target) {
         int count = 0;
         Arrays.sort(nums);
@@ -19,7 +19,7 @@ class ThreeSumSmaller {
     }
 
     public static void main(String args[]) {
-        ThreeSumSmaller m = new ThreeSumSmaller();
+        Main m = new Main();
         int[] nums = new int[] { -2, 0, 1, 3 };
         System.out.print(m.threeSumSmaller(nums, 2));
     }
