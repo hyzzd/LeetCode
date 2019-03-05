@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class Main {
+class LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
         if (nums == null || nums.length == 0)
             return -1;
@@ -30,7 +30,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        LongestConsecutiveSequence m = new LongestConsecutiveSequence();
         int[] nums = new int[] { 100, 4, 200, 1, 3, 2 };
         System.out.print(m.longestConsecutive(nums));
     }

@@ -1,4 +1,4 @@
-class Main {
+class SearchA2DMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0) {
             return false;
@@ -28,7 +28,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        SearchA2DMatrix m = new SearchA2DMatrix();
         int[][] matrix = new int[][] { { 1, 3, 5, 7 }, { 10, 11, 16, 20 }, { 23, 30, 34, 50 } };
         System.out.print(m.searchMatrix(matrix, 3));
     }

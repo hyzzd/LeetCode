@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Main {
+class SpiralMatrix {
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
         if (matrix == null || matrix[0] == null) {
@@ -37,7 +37,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        SpiralMatrix m = new SpiralMatrix();
         int[][] matrix = new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         List<Integer> list = m.spiralOrder(matrix);
         for (int num : list) {

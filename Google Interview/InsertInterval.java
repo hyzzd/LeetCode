@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Main {
+class InsertInterval {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> result = new ArrayList<>();
         if (intervals == null || intervals.size() == 0) {
@@ -53,7 +53,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        InsertInterval m = new InsertInterval();
         List<Interval> intervals = new ArrayList<>();
         intervals.add(new Interval(1, 3));
         intervals.add(new Interval(6, 9));

@@ -20,7 +20,6 @@ class Main {
                 map.put(ch[i], map.get(ch[i]) + 1);
             }
         }
-        int r = 0, g = map.get('R'), b = n - map.get('B');
         Map<Character, Integer> clr = new HashMap<>();
         clr.put('R', 0);
         clr.put('G', 0);

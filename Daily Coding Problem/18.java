@@ -4,7 +4,6 @@ import java.util.PriorityQueue;
 class Main {
     public int[] maxVal(int[] arr, int k) {
         PriorityQueue<Integer> pQ = new PriorityQueue<Integer>(Collections.reverseOrder());
-        int max = 0;
         int[] result = new int[arr.length - k + 1];
 
         int i = 0;

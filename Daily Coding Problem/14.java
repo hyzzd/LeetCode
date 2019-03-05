@@ -2,7 +2,6 @@ import java.util.Random;
 
 class Main {
     public double estimatePi() {
-        double prob = 0.00;
         int low = -1000;
         int high = 1000;
         int count = 0;

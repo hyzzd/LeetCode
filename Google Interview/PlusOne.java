@@ -1,4 +1,4 @@
-class Main {
+class PlusOne {
     public int[] plusOne(int[] digits) {
         int carry = 1;
         for (int i = digits.length - 1; i >= 0 && carry > 0; i--) {
@@ -18,7 +18,7 @@ class Main {
     }
 
     public static void main(String[] args) {
-        Main m = new Main();
+        PlusOne m = new PlusOne();
         int[] digits = m.plusOne(new int[] { 1, 2, 3, 4 });
         for (int digit : digits) {
             System.out.print(digit + " ");

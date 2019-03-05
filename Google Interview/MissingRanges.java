@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Main {
+class MissingRanges {
     public List<String> findMissingRanges(int[] A, int lower, int upper) {
         List<String> list = new ArrayList<>();
         int pre = lower - 1;
@@ -18,7 +18,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        MissingRanges m = new MissingRanges();
         int[] nums = new int[] { 0, 1, 3, 50, 75 };
         List<String> list = m.findMissingRanges(nums, 0, 99);
         for (String li : list) {

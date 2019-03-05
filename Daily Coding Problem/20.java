@@ -1,7 +1,7 @@
 class Main {
-    static Node head;
+    Node head;
 
-    static class Node {
+    class Node {
         int val;
         Node next;
 

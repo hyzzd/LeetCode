@@ -1,4 +1,4 @@
-class Main {
+class FindMaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
         if (nums == null || nums.length == 0)
             return 0;
@@ -16,7 +16,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        FindMaxConsecutiveOnes m = new FindMaxConsecutiveOnes();
         int[] nums = new int[] { 1, 1, 0, 1, 1, 1 };
         System.out.print(m.findMaxConsecutiveOnes(nums));
     }

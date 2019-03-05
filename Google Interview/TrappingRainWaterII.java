@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-class Main {
+class TrappingRainWaterII {
     class Cell {
         int row;
         int col;
@@ -49,7 +49,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        TrappingRainWaterII m = new TrappingRainWaterII();
         int[][] map = new int[][] { { 1, 4, 3, 1, 3, 2 }, { 3, 2, 1, 3, 2, 4 }, { 2, 3, 3, 2, 3, 1 } };
         System.out.print(m.trapRainWater(map));
     }

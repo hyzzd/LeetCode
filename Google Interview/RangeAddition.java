@@ -1,4 +1,4 @@
-class Main {
+class RangeAddition {
     public int[] getModifiedArray(int length, int[][] updates) {
         int[] res = new int[length];
         for (int[] update : updates) {
@@ -19,7 +19,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        RangeAddition m = new RangeAddition();
         int[][] updates = new int[][] { { 1, 3, 2 }, { 2, 3, 3 } };
         int[] nums = m.getModifiedArray(5, updates);
         for (int num : nums) {

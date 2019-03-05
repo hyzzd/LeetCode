@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-class Main {
+class MeetingRoomsII {
     public int minMeetingRooms(Interval[] intervals) {
         if (intervals == null || intervals.length == 0) {
             return -1;
@@ -27,7 +27,7 @@ class Main {
     }
 
     public static void main(String args[]) {
-        Main m = new Main();
+        MeetingRoomsII m = new MeetingRoomsII();
         Interval[] intervals = new Interval[] { new Interval(0, 30), new Interval(5, 10), new Interval(15, 20) };
         System.out.print(m.minMeetingRooms(intervals));
     }
