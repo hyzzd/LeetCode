@@ -22,7 +22,7 @@ class Main {
                     result[i++] = r;
                     right--;
                 } else {
-                    result[i++] = r;
+                    result[i++] = l;
                     left++;
                 }
             }
