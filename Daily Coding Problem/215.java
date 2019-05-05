@@ -12,7 +12,7 @@ class Main {
         }
     }
 
-    public static int[] bottomView(Node root) {
+    public static List<Integer> bottomView(Node root) {
         if (root == null) {
             return null;
         }
@@ -25,12 +25,8 @@ class Main {
         }
 
         Collections.sort(list);
-        int[] arr = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            arr[i] = list.get(i);
-        }
 
-        return arr;
+        return list;
     }
 
     private static void dfs(Node root, int dist, Map<Integer, Integer> map) {
@@ -54,7 +50,7 @@ class Main {
         root.right.left = new Node(6);
         root.right.right = new Node(9);
         root.right.right.left = new Node(8);
-        int[] arr = bottomView(root);
+        List<Integer> arr = bottomView(root);
         for (int a : arr) {
             System.out.println(a);
         }
