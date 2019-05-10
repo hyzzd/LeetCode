@@ -2,7 +2,7 @@ class Main {
     public static int maxAmount(int[] v) {
         int[][] dp = new int[v.length][v.length];
         for (int len = 0; len < v.length; len++) {
-            for (int i = 0, j = len; j < v.length; i++, j++) {
+            for (int i = 0, j = i + len; j < v.length; i++, j++) {
                 int a, b, c;
                 if (i + 2 <= j) {
                     a = dp[i + 2][j];
@@ -23,5 +23,6 @@ class Main {
         System.out.println(maxAmount(new int[] { 1 }));
         System.out.println(maxAmount(new int[] { 1, 2 }));
         System.out.println(maxAmount(new int[] { 1, 2, 3 }));
+        System.out.println(maxAmount(new int[] { 6, 9, 1, 2, 16, 8 }));
     }
 }
