@@ -22,13 +22,13 @@ class UF {
         int xx = find(x);
         int yy = find(y);
         if (xx != yy) {
-            if (rank[x] > rank[y]) {
-                parent[y] = x;
-            } else if (rank[y] > rank[x]) {
-                parent[x] = y;
+            if (rank[xx] > rank[yy]) {
+                parent[yy] = xx;
+            } else if (rank[yy] > rank[xx]) {
+                parent[xx] = yy;
             } else {
-                parent[x] = y;
-                rank[y]++;
+                parent[xx] = yy;
+                rank[yy]++;
             }
         }
     }
