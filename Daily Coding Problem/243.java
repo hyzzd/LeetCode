@@ -23,8 +23,27 @@ class Main {
         return res;
     }
 
+    public static int partitionArr1(int[] arr, int k) { // n > k
+        int n = arr.length;
+        int[][] dp = new int[n + 1][k + 1];
+        for (int i = 0; i <= n; i++) {
+            dp[i][1] = sum(arr, 0, i);
+        }
+        
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 1; j <= k; j++) {
+                int sum1 = sum(arr, 0, i + 1);
+                int sum2 = dp[i + 1][j - 1];
+                dp[i][j] = Math.min(Integer.MAX_VALUE, Math.max(sum1, sum2));
+            }
+        }
+        
+        return dp[0][k];
+    }
+
     public static void main(String[] args) {
         int[] arr = {5, 1, 2, 7, 3, 4};
         System.out.println(partitionArr(arr, 3));
+        System.out.println(partitionArr1(arr, 3));
     }
 }
