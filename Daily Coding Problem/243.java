@@ -32,9 +32,13 @@ class Main {
         
         for (int i = n - 1; i >= 0; i--) {
             for (int j = 1; j <= k; j++) {
-                int sum1 = sum(arr, 0, i + 1);
-                int sum2 = dp[i + 1][j - 1];
-                dp[i][j] = Math.min(Integer.MAX_VALUE, Math.max(sum1, sum2));
+                int min = Integer.MAX_VALUE;
+                for (int t = 0; t <= i; t++) {
+                    int sum1 = sum(arr, 0, t + 1);
+                    int sum2 = dp[t + 1][j - 1];
+                    min = Math.min(min, Math.max(sum1, sum2));
+                }
+                dp[i][j] = min;
             }
         }
         
