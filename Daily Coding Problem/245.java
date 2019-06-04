@@ -2,28 +2,47 @@ import java.util.*;
 
 class Main {
     public static int minStep(int[] arr, int n) {
-        int jumps[] = new int[n]; // jumps[n-1] will hold the
-        // result
-        int i, j;
+        if (arr.length <= 1)
+            return 0;
 
-        if (n == 0 || arr[0] == 0)
-            return Integer.MAX_VALUE; // if first element is 0,
-                                      // end cannot be reached
+        // Return -1 if not possible to jump
+        if (arr[0] == 0)
+            return -1;
 
-        jumps[0] = 0;
+        // initialization
+        int maxReach = arr[0];
+        int step = arr[0];
+        int jump = 1;
 
-        // Find the minimum number of jumps to reach arr[i]
-        // from arr[0], and assign this value to jumps[i]
-        for (i = 1; i < n; i++) {
-            jumps[i] = Integer.MAX_VALUE;
-            for (j = 0; j < i; j++) {
-                if (i <= j + arr[j] && jumps[j] != Integer.MAX_VALUE) {
-                    jumps[i] = Math.min(jumps[i], jumps[j] + 1);
-                    break;
-                }
+        // Start traversing array
+        for (int i = 1; i < arr.length; i++) {
+            // Check if we have reached the end of the array
+            if (i == arr.length - 1)
+                return jump;
+
+            // updating maxReach
+            maxReach = Math.max(maxReach, i + arr[i]);
+
+            // we use a step to get to the current index
+            step--;
+
+            // If no further steps left
+            if (step == 0) {
+                // we must have used a jump
+                jump++;
+
+                // Check if the current index/position or lesser index
+                // is the maximum reach point from the previous indexes
+                if (i >= maxReach)
+                    return -1;
+
+                // re-initialize the steps to the amount
+                // of steps to reach maxReach from position i.
+                step = maxReach - i;
             }
         }
-        return jumps[n - 1];
+
+        return -1;
     }
 
     public static void main(String[] args) {
