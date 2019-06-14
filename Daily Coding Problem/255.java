@@ -9,14 +9,14 @@ class Main {
         }
 
         for (int i = 0; i < adjList.size(); i++) {
-            update(i, i, adjList, transitiveClosure);
+            updateClosure(i, i, adjList, transitiveClosure);
         }
 
         return transitiveClosure;
     }
 
-    public void update(int ori, int node, List<List<Integer>> list, int[][] mat) {
-        if (list.get(node) == 1)
+    public void updateClosure(int ori, int node, List<List<Integer>> list, int[][] mat) {
+        if (list.get(node).size() == 1)
             return;
 
         for (int adj : list.get(node)) {
@@ -25,7 +25,7 @@ class Main {
             }
 
             mat[ori][adj] = 1;
-            update(ori, adj, list, mat);
+            updateClosure(ori, adj, list, mat);
         }
     }
 }
