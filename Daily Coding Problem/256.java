@@ -18,15 +18,11 @@ class Main {
         while (curr != null && curr.next != null) {
             if (flag) {
                 if (curr.val > curr.next.val) {
-                    int t = curr.val;
-                    curr.val = curr.next.val;
-                    curr.next.val = t;
+                    swap(curr, curr.next);
                 }
             } else {
                 if (curr.val < curr.next.val) {
-                    int t = curr.val;
-                    curr.val = curr.next.val;
-                    curr.next.val = t;
+                    swap(curr, curr.next);
                 }
             }
 
@@ -35,6 +31,12 @@ class Main {
         }
 
         return head;
+    }
+
+    private static void swap(Node a, Node b) {
+        int t = a.val;
+        a.val = b.val;
+        b.val = t;
     }
 
     public static void main(String[] args) {
