@@ -20,9 +20,9 @@ class Main {
             for (int i = 0; i < size; i++) {
                 Node curr = q.poll();
                 if (flag) {
-                    list.add(0, curr.val);
+                    res.add(0, curr.val);
                 } else {
-                    list.add(curr.val);
+                    res.add(curr.val);
                 }
 
                 if (curr.left != null)
