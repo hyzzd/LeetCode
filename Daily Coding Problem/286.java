@@ -1,5 +1,6 @@
 // import sys
 
+
 // def get_max_width(buildings):
 //     leftmost, rightmost = sys.maxsize, -sys.maxsize
 //     for start, end, _ in buildings:
