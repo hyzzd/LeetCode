@@ -1,15 +1,42 @@
-// KAP_CONST = 6174
+// SYMBOLS = {'|', '&', '^'}
 
 
-// def apply_kproc(num, steps=0):
-//     if num == KAP_CONST:
-//         return steps
+// class Boolean:
+//     def __init__(self, exp, val, fe, se):
+//         self.exp = exp
+//         self.val = val
+//         self.fe = fe
+//         self.se = se
 
-//     digits = str(num)
-//     assert len(set(digits)) > 2
 
-//     asc_num = "".join(sorted(digits))
-//     dsc_num = "".join(sorted(digits, reverse=True))
+// def evaluator(arr):
+//     expr = "".join(arr)
+//     if len(arr) == 1 or len(arr) == 3:
+//         return [Boolean(expr, eval(expr), arr[0], arr[2] if len(arr) > 2 else None)]
 
-//     diff = int(dsc_num) - int(asc_num)
-//     return apply_kproc(diff, steps + 1)
+//     groupings = list()
+//     for i in range(len(arr) // 2):
+//         pivot = i*2 + 1
+//         first = arr[:pivot]
+//         second = arr[pivot + 1:]
+
+//         for fe in evaluator(first):
+//             for se in evaluator(second):
+//                 new_exp = str(fe.val) + arr[pivot] + str(se.val)
+//                 groupings.append(Boolean(
+//                     new_exp, eval(new_exp), fe, se))
+
+//     return groupings
+
+
+// def get_groupings(arr):
+//     if not arr:
+//         return []
+
+//     for ind in range(len(arr)):
+//         if arr[ind] == 'F':
+//             arr[ind] = 'False'
+//         elif arr[ind] == 'T':
+//             arr[ind] = 'True'
+//     groupings = evaluator(arr)
+//     return groupings
